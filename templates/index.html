@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Python QR Code</title>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      margin: 0re 10rem;
+    }
+
+    .title {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      color: rgb(37, 37, 37);
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .generated {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-style: italic;
+    }
+
+    form input {
+      font-size: 1.2rem;
+      padding: 1rem 1.5rem;
+      width: 50%;
+      background: black;
+      color: white;
+      border: none;
+    }
+
+    form button {
+      padding: 1rem 1.5rem !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Gerador de QR Code 🔥</h1>
+    <h2>Insira um link abaixo para gerar um QR Code</h2>
+  </div>
+
+  <form action="/" method="POST">
+    <input type="text" name="link" placeholder="Cole o link aqui" />
+    <button type="submit" class="btn btn-primary">Gener QR</button>
+  </form>
+
+  {% if data %}
+
+  <div class="generated mt-2">
+    <img src="{{data}}" alt="">
+    <p class="text-primary">Aqui está o QR Code que geramos para você  🚀</p>
+  </div>
+
+  {% endif %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
